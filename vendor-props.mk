@@ -42,4 +42,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.haptic.down.normal=8 \
     sys.haptic.down.strong=18 \
     ro.netflix.bsp_rev=Q670-14477-1
-

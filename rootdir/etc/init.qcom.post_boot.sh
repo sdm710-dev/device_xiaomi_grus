@@ -2935,8 +2935,8 @@ case "$target" in
 	       echo 0-7 > /dev/cpuset/camera-daemon/cpus
 	       echo 4-5,6-7 > /dev/cpuset/foreground/cpus
 	       echo 0-3 > /dev/cpuset/restricted/cpus
-	       echo 0-5 > /dev/cpuset/system-background/cpus
-	       echo 0-5 > /dev/cpuset/top-app/cpus
+	       echo 2-5 > /dev/cpuset/system-background/cpus
+	       echo 0-7 > /dev/cpuset/top-app/cpus
 
           # Turn off scheduler boost at the end
             echo 0 > /proc/sys/kernel/sched_boost

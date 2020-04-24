@@ -82,6 +82,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Authsecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
@@ -522,8 +526,7 @@ PRODUCT_COPY_FILES += \
 
 # Parts
 PRODUCT_PACKAGES += \
-    XiaomiParts \
-    XiaomiPocketMode
+    XiaomiParts
 
 # Custom overlays
 PRODUCT_PACKAGES += \

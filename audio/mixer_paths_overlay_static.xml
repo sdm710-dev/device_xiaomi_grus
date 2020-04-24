@@ -21,7 +21,6 @@
     <ctl name="AMP PCM Gain" value="16" />
     <ctl name="PCM Soft Ramp" value="4ms" />
     <ctl name="INT0_MI2S_RX SampleRate" value="KHZ_48" />
-    <ctl name="ADC1_INP1 Switch" value="0" />
 
 
     <path name="deep-buffer-playback">
@@ -391,7 +390,7 @@
     </path>
 
     <path name="handset">
-        <ctl name="INT0_MI2S_RX SampleRate" value="KHZ_96" />
+        <ctl name="INT0_MI2S_RX SampleRate" value="KHZ_48" />
         <ctl name="RX1 MIX1 INP1" value="RX2" />
         <ctl name="RDAC2 MUX" value="RX1" />
         <ctl name="EAR_S" value="Switch" />
@@ -447,7 +446,7 @@
         <ctl name="ADC2 MUX" value="INP3" />
         <ctl name="INT3_MI2S_TX Channels" value="Two" />
         <ctl name="Ultrasound Microphone Index" value="1" />
-        <ctl name="DEC1 Volume" value="90" />
+        <ctl name="DEC1 Volume" value="84" />
         <ctl name="ADC1 Volume" value="6" />
         <ctl name="ADC3 Volume" value="6" />
     </path>

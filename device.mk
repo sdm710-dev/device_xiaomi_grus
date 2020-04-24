@@ -480,7 +480,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.1-service.grus
+    android.hardware.vibrator@1.0-service \
+    android.hardware.vibrator@1.0-impl
 
 # VNDK-SP
 PRODUCT_PACKAGES += \

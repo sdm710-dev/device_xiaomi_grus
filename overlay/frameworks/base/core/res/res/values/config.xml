@@ -382,7 +382,7 @@
     <integer name="config_screenBrightnessDim">10</integer>
     <integer name="config_screenBrightnessDark">1</integer>
     <integer name="config_screenBrightnessDoze">1</integer>
-    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
+    <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
 
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
@@ -1023,7 +1023,7 @@
          Refer to autosuspend.h for details. -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
@@ -1126,4 +1126,5 @@
     <string name="config_smartChargingSuspendValue" translatable="false">1</string>
     <string name="config_smartChargingResumeValue" translatable="false">0</string>
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
+    <bool name="config_fingerprintWakeAndUnlock">false</bool>
 </resources>

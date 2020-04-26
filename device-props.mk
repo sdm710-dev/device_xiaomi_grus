@@ -110,8 +110,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.dynamic_sar=false \
 	persist.radio.NO_STAPA=1 \
 	persist.radio.VT_HYBRID_ENABLE=1 \
-	persist.radio.modem_dynamic_sar_state=close
-
+	persist.radio.modem_dynamic_sar_state=close \
+        debug.stagefright.ccodec=4 \
+        debug.stagefright.omx_default_rank=512
 # Notch overlay
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.miui.notch=1

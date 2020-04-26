@@ -18,6 +18,9 @@ $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 # Inherit from land device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
+# Audio
+$(call inherit-product, $(LOCAL_PATH)/audio/sdm710.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := derp_grus
 PRODUCT_DEVICE := grus

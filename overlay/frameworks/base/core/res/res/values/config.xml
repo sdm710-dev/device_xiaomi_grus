@@ -1117,7 +1117,7 @@
     <string name="config_deviceKeyHandlerClass" translatable="false">org.chaldeastudio.deviceparts.KeyHandler</string>
 
     <!-- Default value for proximity check on screen wake -->
-    <bool name="config_proximityCheckOnWake">true</bool>
+    <bool name="config_proximityCheckOnWake">false</bool>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
 
     <!-- Smart charging -->

@@ -54,10 +54,14 @@
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
+<<<<<<< HEAD
         <item>"wlan0"</item>
         <item>"wigig0"</item>
         <item>"softap0"</item>
         <item>"wifi_br0"</item>
+=======
+        <item>"wlan\\d"</item>
+>>>>>>> 79cc7d4... overlay: fix tethering and disable fading marquee
     </string-array>
 
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
@@ -67,7 +71,6 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
-        <item>"bnep\\d"</item>
         <item>"bt-pan"</item>
     </string-array>
 
@@ -1023,7 +1026,7 @@
          Refer to autosuspend.h for details. -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
-    <bool name="config_displayBlanksAfterDoze">false</bool>
+    <bool name="config_displayBlanksAfterDoze">true</bool>
 
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
@@ -1108,6 +1111,7 @@
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
+<<<<<<< HEAD
     <!-- The list absolute paths of jar/apk files containing the device specific handlers,
         delimited by File.pathSeparator, which defaults to ":" on Android  -->
     <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/XiaomiParts/XiaomiParts.apk</string>
@@ -1127,4 +1131,14 @@
     <string name="config_smartChargingResumeValue" translatable="false">0</string>
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
     <bool name="config_fingerprintWakeAndUnlock">false</bool>
+=======
+    <!-- Smart charge sysfs node and value for suspend/resume charging-->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <bool name="config_ui_enableFadingMarquee">false</bool>
+>>>>>>> 79cc7d4... overlay: fix tethering and disable fading marquee
 </resources>

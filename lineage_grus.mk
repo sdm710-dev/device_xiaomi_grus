@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common stuff
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from land device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -22,7 +22,7 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 $(call inherit-product, $(LOCAL_PATH)/audio/sdm710.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := derp_grus
+PRODUCT_NAME := lineage_grus
 PRODUCT_DEVICE := grus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9 SE
@@ -36,18 +36,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="grus" \
     TARGET_DEVICE="grus"
 
-# Google Services
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-WITH_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-
-# DerpFest OFFICIAL
-DERP_BUILDTYPE := Official
 
 # Disable debuging
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_PACKAGES_DEBUG := false
 PRODUCT_PACKAGES_DEBUG_ASAN := false
+

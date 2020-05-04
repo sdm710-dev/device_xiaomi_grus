@@ -54,18 +54,20 @@
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
-<<<<<<< HEAD
+
         <item>"wlan0"</item>
-        <item>"wigig0"</item>
-        <item>"softap0"</item>
-        <item>"wifi_br0"</item>
-=======
         <item>"wlan\\d"</item>
->>>>>>> 79cc7d4... overlay: fix tethering and disable fading marquee
+
     </string-array>
 
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_acs_supported">false</bool>
+
+    <!-- list of interface names for SoftAp in Dual mode. -->
+    <string-array translatable="false" name="config_wifi_dual_sap_interfaces">
+        <item>"softap1"</item>
+        <item>"softap2"</item>
+    </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
@@ -324,11 +326,6 @@
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
 
-    <!-- The list of components which should be automatically disabled for a specific device. -->
-    <string-array name="config_deviceDisabledComponents" translatable="false">
-        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
-    </string-array>
-
     <!-- True if the device supports Sustained Performance Mode-->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
@@ -393,7 +390,7 @@
     <bool name="config_enableBurnInProtection">true</bool>
 
     <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
-    <integer name="config_autoBrightnessLightSensorRate">450</integer>
+    <integer name="config_autoBrightnessLightSensorRate">250</integer>
 
     <!-- When the screen is turned on, the previous estimate of the ambient light level at the time
          the screen was turned off is restored and is used to determine the initial screen
@@ -432,6 +429,8 @@
         <item>1097</item>
         <item>1808</item>
         <item>2981</item>
+		<item>3745</item>
+		<item>4521</item>
         <item>5000</item>
     </integer-array>
 
@@ -447,6 +446,7 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
+		<item>2.73</item>   	<!-- 0-0 -->
         <item>10.45935</item>   <!-- 0-1 -->
         <item>29.25559</item>   <!-- 1-2 -->
         <item>34.240692</item>  <!-- 2-3 -->
@@ -465,7 +465,8 @@
         <item>240.74442</item>  <!-- 1097-1808 -->
         <item>294.84857</item>  <!-- 1808-2981 -->
         <item>348.05453</item>  <!-- 2981-5000 -->
-        <item>389.70</item>  <!-- 5000+ -->
+        <item>389.70</item>  	<!-- 4521+ -->
+		<item>430.00</item>  	<!-- 5000+ -->
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -727,6 +728,11 @@
         <item>253</item>
         <item>254</item>
         <item>255</item>
+		<item>256</item>
+		<item>257</item>
+		<item>258</item>
+		<item>259</item>
+		<item>260</item>
     </integer-array>
 
       <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
@@ -991,6 +997,11 @@
         <item>386.50</item> <!-- index 253 -->
         <item>388.42</item> <!-- index 254 -->
         <item>389.70</item> <!-- index 255 -->
+		<item>395.62</item> <!-- index 256 -->
+		<item>402.60</item> <!-- index 257 -->
+		<item>411.70</item> <!-- index 258 -->
+		<item>419.30</item> <!-- index 259 -->
+		<item>430.00</item> <!-- index 260 -->
     </array>
 
     <array name="config_minimumBrightnessCurveNits">
@@ -1005,7 +1016,7 @@
 
     <!-- Maximum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness above this level. -->
-    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessSettingMaximum">260</integer>
 
      <!-- The maximum range of gamma adjustment possible using the screen
           auto-brightness adjustment setting. -->
@@ -1111,7 +1122,6 @@
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
-<<<<<<< HEAD
     <!-- The list absolute paths of jar/apk files containing the device specific handlers,
         delimited by File.pathSeparator, which defaults to ":" on Android  -->
     <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/XiaomiParts/XiaomiParts.apk</string>
@@ -1129,16 +1139,13 @@
     <string name="config_smartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
     <string name="config_smartChargingSuspendValue" translatable="false">1</string>
     <string name="config_smartChargingResumeValue" translatable="false">0</string>
+	
+	<!-- Ignore RRS Signal -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
     <bool name="config_fingerprintWakeAndUnlock">false</bool>
-=======
-    <!-- Smart charge sysfs node and value for suspend/resume charging-->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-
+	
+	<!-- Adaptive sleep -->
     <bool name="config_adaptive_sleep_available">true</bool>
+	<bool name="config_ui_enableFadingMarquee">false</bool>
 
-    <bool name="config_ui_enableFadingMarquee">false</bool>
->>>>>>> 79cc7d4... overlay: fix tethering and disable fading marquee
 </resources>

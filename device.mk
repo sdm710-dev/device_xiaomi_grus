@@ -303,7 +303,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1 \
     lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus \
-    vendor.xiaomi.hardware.fingerprintextension@1.0
+    vendor.xiaomi.hardware.fingerprintextension@1.0 \
+	xiaomi-fp
 
 # HIDL
 PRODUCT_PACKAGES += \

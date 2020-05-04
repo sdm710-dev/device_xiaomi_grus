@@ -1,0 +1,11 @@
+cc_binary {
+	name: "xiaomi-fp",
+	srcs: [
+		"xiaomi-fp.cpp",
+	],
+	shared_libs: [
+		"vendor.xiaomi.hardware.fingerprintextension@1.0",
+		"libutils",
+		"libhidlbase",
+	],
+}

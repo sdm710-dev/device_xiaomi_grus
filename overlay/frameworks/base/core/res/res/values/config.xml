@@ -387,7 +387,7 @@
     <bool name="config_enableBurnInProtection">true</bool>
 
     <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
-    <integer name="config_autoBrightnessLightSensorRate">450</integer>
+    <integer name="config_autoBrightnessLightSensorRate">250</integer>
 
     <!-- When the screen is turned on, the previous estimate of the ambient light level at the time
          the screen was turned off is restored and is used to determine the initial screen
@@ -1030,7 +1030,7 @@
     <bool name="config_dual_LTE_capability">true</bool>
 
     <!-- Integer indicating wpa_supplicant scan interval in milliseconds -->
-    <integer translatable="false" name="config_wifi_supplicant_scan_interval">25000</integer>
+    <integer translatable="false" name="config_wifi_supplicant_scan_interval">30000</integer>
 
     <!-- Vibration -->
     <integer-array name="config_longPressVibePattern">
@@ -1044,7 +1044,7 @@
         <item>10</item>
     </integer-array>
     <integer-array name="config_keyboardTapVibePattern">
-        <item>10</item>
+        <item>7</item>
     </integer-array>
 
     <!-- Whether or not we should show vendor mismatch message -->
@@ -1123,4 +1123,7 @@
     <bool name="config_fingerprintWakeAndUnlock">false</bool>
     <bool name="config_adaptive_sleep_available">true</bool>
     <bool name="config_ui_enableFadingMarquee">false</bool>
+    <integer name="config_maxVisibleNotificationIcons">6</integer>
+    <integer name="config_maxVisibleNotificationIconsOnLock">6</integer>
+    <integer name="config_maxVisibleStatusIconContainer">7</integer>
 </resources>

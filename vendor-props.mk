@@ -38,6 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.stapp.display=1 \
     ro.vendor.audio.us.proximity=true \
     ro.vendor.df.effect.conflict=1 \
-    sys.haptic.down.weak=3 \
-    sys.haptic.down.normal=8 \
-    sys.haptic.down.strong=18 
+    sys.haptic.down.weak=5 \
+    sys.haptic.down.normal=12 \
+    sys.haptic.down.strong=18
+

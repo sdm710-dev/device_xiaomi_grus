@@ -40,5 +40,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.df.effect.conflict=1 \
     sys.haptic.down.weak=3 \
     sys.haptic.down.normal=8 \
-    sys.haptic.down.strong=18 \
-    ro.netflix.bsp_rev=Q670-14477-1
+    sys.haptic.down.strong=18 

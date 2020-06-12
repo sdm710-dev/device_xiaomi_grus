@@ -23,7 +23,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_con_rprt=1 \
     persist.radio.calls.on.ims=1 \
     persist.dbg.wfc_avail_ovr=1 \
-    persist.vendor.ims.disableUserAgent=0
+    persist.vendor.ims.disableUserAgent=0 \
+    persist.data.netmgrd.qos.enable=true \
+    service.qti.ims.enabled=1 
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.env.fastdorm.enabled=true
 
 # Disable sensors debug
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -51,8 +56,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-#    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
-#    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
 
 #
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -98,6 +101,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	media.stagefright.enable-qcp=true \
 	media.stagefright.enable-fma2dp=true \
 	media.stagefright.enable-scan=true \
+	debug.stagefright.ccodec=4 \
 	mmp.enable.3g2=true \
 	media.aac_51_output_enabled=true \
 	mm.enable.smoothstreaming=true \
@@ -108,6 +112,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dev.pm.dyn_samplingrate=1 \
 	persist.sys.strictmode.disable=true \
 	persist.radio.dynamic_sar=false \
+	persist.vendor.radio.rat_on=combine \
 	persist.radio.NO_STAPA=1 \
 	persist.radio.VT_HYBRID_ENABLE=1 \
 	persist.radio.modem_dynamic_sar_state=close

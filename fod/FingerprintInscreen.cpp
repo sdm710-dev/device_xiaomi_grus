@@ -30,13 +30,13 @@
 #define DISPPARAM_FOD_BACKLIGHT_HBM "0x1D007FF"
 #define DISPPARAM_FOD_BACKLIGHT_RESET "0x2D01000"
 
-#define FOD_STATUS_PATH ""
+#define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF 0
 
 #define FOD_SENSOR_X 448
 #define FOD_SENSOR_Y 1938
-#define FOD_SENSOR_SIZE 158
+#define FOD_SENSOR_SIZE 185
 
 #define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
 

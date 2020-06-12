@@ -9,7 +9,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=cherokee \
     vendor.qcom.bluetooth.soc=cherokee \
-    persist.bluetooth.bluetooth_audio_hal.disabled=true
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
+    persist.bluetooth.a2dp_offload.disabled=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -31,21 +32,27 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0 \
     persist.vendor.data.profile_update=true \
     persist.vendor.data.mode=concurrent \
-    ro.vendor.use_data_netmgrd=true \
-    persist.data.netmgrd.qos.enable=true
+    ro.vendor.use_data_netmgrd=true
 
 # Display density
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=400 \
+    ro.display.type=oled \
+    persist.debug.force_burn_in=true \
+    persist.sys.sf.native_mode=0 \
+    persist.sys.sf.color_saturation=1.0 \
+    vendor.display.enable_default_color_mode=1 \
+    vendor.display.dataspace_saturation_matrix=1.16868,-0.03155,-0.01473,-0.16868,1.03155,-0.05899,0.00000,0.00000,1.07372
 
 # Display features
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.displayfeature_hidl=true \
     sys.displayfeature.hbm.enable=true \
     ro.displayfeature.histogram.enable=true \
-    ro.eyecare.brightness.threshold=7 \
-    ro.eyecare.brightness.level=5 \
-    ro.hist.brightness.threshold=7
+    ro.eyecare.brightness.threshold=15 \
+    ro.eyecare.brightness.level=8 \
+    ro.hist.brightness.threshold=7 \
+    ro.whitepoint_calibration_enable=true
 
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -64,8 +71,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.offload.video=true \
-    media.stagefright.thumbnail.prefer_hw_codecs=true
+    audio.offload.video=true
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -77,22 +83,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=4 \
-    ro.vendor.qti.core_ctl_max_cpu=6 \
+    ro.vendor.qti.core_ctl_min_cpu=2 \
+    ro.vendor.qti.core_ctl_max_cpu=4 \
     vendor.iop.enable_prefetch_ofr=0 \
     vendor.iop.enable_uxe=0 \
     persist.vendor.perfservice.disable=1
 
-# RCS
+# RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0
-
-# QC framework value-adds
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.va_aosp.support=1
-
-PRODUCT_ODM_PROPERTIES += \
-    ro.vendor.qti.va_odm.support=1
+    persist.rcs.supported=0 \
+    persist.vendor.ims.disableUserAgent=0
 
 # Nitz
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -115,14 +115,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.procedure_bytes=SKIP \
-    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.flexmap_type=none \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
-    ril.subscription.types=RUIM \
-    ro.telephony.default_network=22,22 \
+    ril.subscription.types=NV,RUIM \
+    ro.telephony.default_network=9,9 \
     telephony.lteOnCdmaDevice=1 \
     persist.radio.add_power_save=1 \
     persist.vendor.radio.report_codec=1 \
@@ -150,3 +150,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.fp.fod=true \
     persist.vendor.sys.fp.fod.location.X_Y=448,1938 \
     persist.vendor.sys.fp.fod.size.width_height=185,185
+
+# Enable Value Added AOSP support
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1
+
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1
+

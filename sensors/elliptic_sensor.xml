@@ -3,8 +3,8 @@
   <sensors>
     <sensor name="Elliptic Proximity" reader="hexagon" sensor_type="8" type="4" subtype="401" audio_notify="ultrasound-proximity" debug="false">
 	  <ranges>
-        <near value="0.0" limit="1.0"></near>
-        <far  value="3.0" limit="5.0"></far>
+        <near value="0.0" limit="3.0"></near>
+        <far  value="5.0" limit="5.0"></far>
       </ranges>
 	</sensor>
   </sensors>

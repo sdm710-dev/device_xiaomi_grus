@@ -13,7 +13,7 @@ SoC     | Qualcomm SDM712 Snapdragon 712
 CPU     | Octa-core (2x2.3 GHz Kryo 360 Gold & 6x1.7 GHz Kryo 360 Silver)
 GPU     | Adreno 616
 Memory  | 6 GB RAM
-Shipped Android Version | 9.0 with MIUI 10
+Shipped Android Version | 9.0 with MIUI 10 | Q with MIUI 11/12
 Storage | 64/128 GB
 Battery | Non-removable Li-Ion 3070 mAh battery
 Display | 1080 x 2340 pixels, 19.5:9 ratio, 5.97 inches, Super AMOLED (~432 ppi density)
@@ -30,6 +30,7 @@ Camera  | Triple 48 MP, PDAF, dual-LED (dual tone) flash
 # Copyright (C) 2018-2020 The LineageOS Project
 # Copyright (C) 2019-2020 The PixelExperience Project
 # Copyright (C) 2020 Luis Ferreira <contact@lsferreira.net>
+# Copyright (C) 2020 DevelopedInside
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

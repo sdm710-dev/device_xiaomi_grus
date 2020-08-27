@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "fuldaros/vendor_xiaomi_grus",
+    "target_path": "vendor/xiaomi/grus",
+    "remote": "github",
+    "branch": "master"
+  },
+  {
+    "repository": "fuldaros/kernel_xiaomi_grus",
+    "target_path": "kernel/xiaomi/sdm710",
+    "branch": "caf",
+    "remote": "github"
+  }
+]

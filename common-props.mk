@@ -36,7 +36,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display density
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=432 \
+    ro.sf.lcd_density=480 \
     ro.display.type=oled \
     persist.debug.force_burn_in=true \
     persist.sys.sf.native_mode=0 \
@@ -83,8 +83,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=2 \
-    ro.vendor.qti.core_ctl_max_cpu=4 \
+    ro.vendor.qti.core_ctl_min_cpu=2\
+    ro.vendor.qti.core_ctl_max_cpu=6\
     vendor.iop.enable_prefetch_ofr=0 \
     vendor.iop.enable_uxe=0 \
     persist.vendor.perfservice.disable=1
